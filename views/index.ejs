@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <div class="formb">
+          <form action="/" method="post">
+            <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+            <input type="submit" id=" button" class="ghost-button" value="Get Weather">
+          </form>
+        </div>
+
+        <div class="weatherdata">
+          <% if(weather !== null){ %>
+
+            <p><%= weather %></p>
+            <p><%=TempMin%></p>
+
+
+            <p><%=TempMax%></p>
+            <p><%=Humidity%></p>
+            <p><%=Pressure%></p>
+
+
+          <% } %>
+
+          <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
+        </div>
+
+      </fieldset>
+    </div>
+  </body>
+</html>
